@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Animated Pixels – Docs</title>
-    <link>https://jujoje.github.io/animated-pixels/docs/</link>
+    <link>http://localhost:58459/animated-pixels/docs/</link>
     <description>Recent content in Docs on Animated Pixels</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <lastBuildDate>Sat, 18 Oct 2025 19:05:21 +1100</lastBuildDate>
     
-	  <atom:link href="https://jujoje.github.io/animated-pixels/docs/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:58459/animated-pixels/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,11 +16,11 @@
     
     
     <item>
-      <title>Rigging in Houdini</title>
-      <link>https://jujoje.github.io/animated-pixels/docs/apex/getting_started/rigging_in_houdini/</link>
+      <title>‘Rigs in Houdini&#39;</title>
+      <link>http://localhost:58459/animated-pixels/docs/apex/getting_started/rigging_in_houdini/</link>
       <pubDate>Sat, 18 Oct 2025 17:16:10 +1100</pubDate>
       
-      <guid>https://jujoje.github.io/animated-pixels/docs/apex/getting_started/rigging_in_houdini/</guid>
+      <guid>http://localhost:58459/animated-pixels/docs/apex/getting_started/rigging_in_houdini/</guid>
       <description>
         
         
@@ -31,10 +31,18 @@
 &lt;/ul&gt;
 &lt;p&gt;SideFX often use the two terms interchangeably and the two systems are fundamentally interrelated;&lt;/p&gt;
 &lt;h2&gt;Skeletons and KineFX&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;skeletons-and-kinefx&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#skeletons-and-kinefx&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;KineFX rigs consist of points and polygon lines. The point contain the joint transform matrices and attributes (transform, local transform, scale, joint name), while the line defines the hierarchy of the skeleton.&lt;/p&gt;
+    &lt;a href=&#34;#skeletons-and-kinefx&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;http://localhost:58459/animated-pixels/apex/img/getting_started.kinefx.png&#34; title=&#34;A Basic KineFX Skeleton&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;A Basic KineFX Skeleton&lt;/figcaption&gt;
+  &lt;/figure&gt;
+KineFX rigs consist of points and polygon lines. The point contain the joint transform matrices and attributes (transform, local transform, scale, joint name), while the line defines the hierarchy of the skeleton.&lt;/p&gt;
 &lt;p&gt;One of the nice things about skeletons just being points with a transform matrix is that all of Houdini usual geometry tools can be use to manipulate them, for example creating a skeleton based off a curve, or procedurally adding joints using a resample, or constraining joints to a surface using a &lt;code&gt;primuv&lt;/code&gt; lookup.&lt;/p&gt;
 &lt;h2&gt;APEX&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;apex&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#apex&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;While APEX is most often associated with rigging, it stands for &lt;em&gt;All Purpose EXecution&lt;/em&gt; framework, and is also used for Houdini&amp;rsquo;s texturing and compositing framework Copernicus etc. It is an execution framework that runs outside of houdini, with the emphasis on speed.&lt;/p&gt;
+    &lt;a href=&#34;#apex&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;http://localhost:58459/animated-pixels/apex/img/getting_started.apex.png&#34; title=&#34;Otto&amp;#39;s APEX Rig&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Otto&amp;#39;s APEX Rig&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;While APEX is most often associated with rigging, it stands for &lt;em&gt;All Purpose EXecution&lt;/em&gt; framework, and is also used for Houdini&amp;rsquo;s texturing and compositing framework Copernicus etc. It is an execution framework that runs outside of houdini, with the emphasis on speed.&lt;/p&gt;
 &lt;p&gt;For rigging purposes, it provides a fast environment for executing the rig and deforming geometry, tied closely the the animation state.  According to SideFX, the main advantages of APEX are that it offers:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Flexibility by storing the entire graph as geometry.&lt;/li&gt;
@@ -45,6 +53,19 @@
 &lt;li&gt;Designed with traditional and ephemeral rigging in mind.&lt;/li&gt;
 &lt;/ul&gt;
 
+      </description>
+    </item>
+    
+    <item>
+      <title>Basic Rigging Workflow</title>
+      <link>http://localhost:58459/animated-pixels/docs/apex/getting_started/basic_rigging_workflow/</link>
+      <pubDate>Sat, 18 Oct 2025 19:05:21 +1100</pubDate>
+      
+      <guid>http://localhost:58459/animated-pixels/docs/apex/getting_started/basic_rigging_workflow/</guid>
+      <description>
+        
+        
+        
       </description>
     </item>
     
