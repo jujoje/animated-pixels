@@ -1,6 +1,5 @@
 ---
 date: '2025-10-18T17:16:10+11:00'
-draft: true
 title: 'Rigging in Houdini'
 weight: 1
 ---
