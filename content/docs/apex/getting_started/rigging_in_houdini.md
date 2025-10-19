@@ -17,7 +17,7 @@ KineFX rigs consist of points and polygon lines. The point contain the joint tra
 One of the nice things about skeletons just being points with a transform matrix is that all of Houdini usual geometry tools can be use to manipulate them, for example creating a skeleton based off a curve, or procedurally adding joints using a resample, or constraining joints to a surface using a `primuv` lookup. 
 
 ## APEX
-While APEX is most often associated with rigging, it stands for *All Purpose eXecution Framework*, and is also used for Houdini's texturing and compositing framework Copernicus etc. It is an execution framework that runs outside of houdini, with the emphasis on speed. 
+While APEX is most often associated with rigging, it stands for *All Purpose EXecution* framework, and is also used for Houdini's texturing and compositing framework Copernicus etc. It is an execution framework that runs outside of houdini, with the emphasis on speed. 
 
 For rigging purposes, it provides a fast environment for executing the rig and deforming geometry, tied closely the the animation state.  According to SideFX, the main advantages of APEX are that it offers:
 
