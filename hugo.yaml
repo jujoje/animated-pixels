@@ -1,7 +1,7 @@
 baseURL: https://jujoje.github.io/animated-pixels/
 languageCode: en-uk
 title: Animated Pixels
-theme: hextra
+theme: [hugo-video, hextra]
 
 
 menu:
@@ -18,3 +18,6 @@ params:
         page:
           # full (100%), wide (90rem), normal (1280px)
           width: full
+          
+          
+  

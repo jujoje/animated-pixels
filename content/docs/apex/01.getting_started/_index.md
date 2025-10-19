@@ -13,13 +13,8 @@ This section gives a general introduction to APEX in Houdini. It assumes a basic
 > [!INFO]
 > This set of tutorials were created for Houdini 21. APEX changed significantly between 20.5 and 21. It is strongly recommended to use Houdini 21 to ensure that everything works as expected.
 
-## Legend
-- = Document
-- = Example Scene
-- = 
-
 ## Contents
-- [00 Rigs in Houdini](/apex/01.getting_started/00.rigs_in_houdini/): The difference between KineFX and APEX
-- [01 Workflow Overview](): Overview of setting up an APEX Rig
-- [02 Demo: A Simple Rig](): Simple walkthrough of prepping geometry for a rig.
+- [00 Rigs in Houdini]({{< ref "00.rigs_in_houdini" >}}): A brief introduction to KineFX and APEX
+- [01 Workflow Overview]({{< ref "01.workflow_overview" >}}): Overview of setting up an APEX Rig
+- [02 Demo: A Simple Rig](({{< ref "02.building_a_simple_rig" >}})): Simple walkthrough of prepping geometry for a rig.
 
