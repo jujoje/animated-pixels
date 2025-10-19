@@ -1,0 +1,44 @@
+---
+date: '2025-10-18T19:05:21+11:00'
+draft: true
+title: '01. Workflow Overview'
+weight: 2
+---
+## Geometry Setup
+The basic rigging workflow for
+- Create a skeleton
+- Capture the geometry
+- Pack skin and skeleton for APEX
+- Build rig in APEX
+
+#### Skeleton
+The skeleton is defined by points with a transform attribute. At base, the points need to have:
+- `s@name`: The name of the joint
+- `3@transform`: The transform matrix
+
+#### Skinning
+The other main thing you need to have is a skinned mesh. There are three main ways to capture geometry in Houdini:
+- **Joint Capture Biharmonic**: Uses biharmonic weighting to capture the geometry. Usually gives a good base weight with minimal tweaking.
+- **Proximity Capture**: Captures based off proximity. Useful for things like cluster weights or simple weighting. 
+- **Packed Capture**: Captures packed geometry. This is useful for rigid objects or mechanical rigging. 
+There are also the usual array of controls for painting or manipulating weights, however with a bit of forethought it is usually possible to create procedural skin weighting avoiding having to manually paint weights. 
+
+#### Packed Folders
+For the skin, skeleton and other data to be moved to the APEX environment it needs to be packed. Packed folders act as a containers. While anything can be put into a packed folder there are some conventions that get used by the default autorigs:
+
+- `Base.skel`:  The deformation skeleton.
+- `Guides.skel`: The base skeleton, plus helper controls, joints and metadata for the rig. 
+- `Base.shp`: The skin  geometry that gets deformed.
+
+And in terms of convention there are some default extensions:
+- *skel*: Skeleton Geometry
+- *shp*: Geometry (e.g. skin/blend shapes etc)
+- *rig*: Rig logic (as we shall see apex rigs are stored as geometry).
+
+Everything used in the animate state is saved as a packed folder. For example:
+- Animation curves are primitives in an animation folder, 
+- Ragdoll geometry is just an additional shape folder with the collision geometry. - 
+- Constraints and locators are just rig logic in a packed folder that gets added to the rig graph. 
+- Control Library containing a shape library for the rig controls. 
+
+You can add anything you could need to a packed folder to make it available to the rig; you are not restricted to the a specific set of packed folders. 

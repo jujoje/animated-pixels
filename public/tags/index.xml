@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Animated Pixels – Tags</title>
-    <link>http://localhost:58459/animated-pixels/tags/</link>
+    <link>http://localhost:58905/animated-pixels/tags/</link>
     <description>Recent content in Tags on Animated Pixels</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     
-	  <atom:link href="http://localhost:58459/animated-pixels/tags/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:58905/animated-pixels/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
       
