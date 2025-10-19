@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr"><head><script src="/animated-pixels/livereload.js?mindelay=10&amp;v=2&amp;port=59907&amp;path=animated-pixels/livereload" data-no-instant defer></script>
+<html lang="en" dir="ltr"><head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
   <link rel="icon shortcut" href="/animated-pixels/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/animated-pixels/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/animated-pixels/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -10,7 +10,7 @@
 <link fetchpriority="low" href="/animated-pixels/site.webmanifest" rel="manifest" />
 <title>Rigging in Houdini – Animated Pixels</title>
   <meta name="description" content="Rigging in Houdini consists of two overlapping systems:
-KineFX: KineFX uses geometry to define a skeleton and is used as the basis for the SOP based rigging tools, motion retargeting and crowd agent setup. APEX: APEX runs on its own execution engine, and is focuses on providing a procedural system for building rigs, tied to an animator friendly viewport state that efficient evaluates the rig. SideFX often use the two terms interchangeably and while there are some distinctions between the two, it makes sense. KineFX and SOPs prepare the skeleton and geometry, with APEX building the rig logic and animation controls." /><link rel="canonical" href="http://localhost:59907/animated-pixels/docs/apex/01.getting_started/00.rigging_in_houdini/" itemprop="url" />
+KineFX: KineFX uses geometry to define a skeleton and is used as the basis for the SOP based rigging tools, motion retargeting and crowd agent setup. APEX: APEX runs on its own execution engine, and is focuses on providing a procedural system for building rigs, tied to an animator friendly viewport state that efficient evaluates the rig. SideFX often use the two terms interchangeably and while there are some distinctions between the two, it makes sense. KineFX and SOPs prepare the skeleton and geometry, with APEX building the rig logic and animation controls." /><link rel="canonical" href="https://jujoje.github.io/animated-pixels/docs/apex/01.getting_started/00.rigging_in_houdini/" itemprop="url" />
 
 <meta property="og:title" content="Rigging in Houdini">
 <meta
@@ -30,7 +30,7 @@ SideFX often use the two terms interchangeably and while there are some distinct
   content="
     article
   ">
-<meta property="og:url" content="http://localhost:59907/animated-pixels/docs/apex/01.getting_started/00.rigging_in_houdini/"><meta property="article:section" content="docs">
+<meta property="og:url" content="https://jujoje.github.io/animated-pixels/docs/apex/01.getting_started/00.rigging_in_houdini/"><meta property="article:section" content="docs">
 
 <meta
   property="article:published_time"
@@ -53,12 +53,18 @@ KineFX: KineFX uses geometry to define a skeleton and is used as the basis for t
   <meta name="twitter:title" content="Rigging in Houdini">
   <meta name="twitter:description" content="Rigging in Houdini consists of two overlapping systems:
 KineFX: KineFX uses geometry to define a skeleton and is used as the basis for the SOP based rigging tools, motion retargeting and crowd agent setup. APEX: APEX runs on its own execution engine, and is focuses on providing a procedural system for building rigs, tied to an animator friendly viewport state that efficient evaluates the rig. SideFX often use the two terms interchangeably and while there are some distinctions between the two, it makes sense. KineFX and SOPs prepare the skeleton and geometry, with APEX building the rig logic and animation controls.">
-<link href="/animated-pixels/css/compiled/main.css" rel="stylesheet" />
-    <link href="/animated-pixels/css/variables.css" rel="stylesheet" />
-    <link href="/animated-pixels/css/custom.css" rel="stylesheet" />
+
+    <link rel="preload" href="/animated-pixels/css/compiled/main.min.4226b3776aa676b7fd6e0f46c0a3e7377a85aa4ccd7c2b65cf3e955156c407d3.css" as="style" integrity="sha256-Qiazd2qmdrf9bg9GwKPnN3qFqkzNfCtlzz6VUVbEB9M=" />
+    <link href="/animated-pixels/css/compiled/main.min.4226b3776aa676b7fd6e0f46c0a3e7377a85aa4ccd7c2b65cf3e955156c407d3.css" rel="stylesheet" integrity="sha256-Qiazd2qmdrf9bg9GwKPnN3qFqkzNfCtlzz6VUVbEB9M=" />
 
   
-<script src="/animated-pixels/js/main-head.js" integrity=""></script>
+
+
+
+
+
+
+<script src="/animated-pixels/js/main-head.min.94da6f95b126542222dab3a6e07ffefe1aaf63ec3ca555e827b58b80e7d3f0b7.js" integrity="sha256-lNpvlbEmVCIi2rOm4H/&#43;/hqvY&#43;w8pVXoJ7WLgOfT8Lc="></script>
 
   
   
@@ -205,14 +211,6 @@ KineFX: KineFX uses geometry to define a skeleton and is used as the basis for t
   >A Simple Rig
     </a>
               
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/animated-pixels/docs/apex/01.getting_started/03.rig_metadata/"
-    
-  >Rig Metadata
-    </a>
-              
             </li></ul>
       </div>
             </li></ul>
@@ -269,14 +267,6 @@ KineFX: KineFX uses geometry to define a skeleton and is used as the basis for t
     href="/animated-pixels/docs/apex/01.getting_started/02.building_a_simple_rig/"
     
   >A Simple Rig
-    </a>
-              
-            </li><li class="hx:flex hx:flex-col "><a
-    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/animated-pixels/docs/apex/01.getting_started/03.rig_metadata/"
-    
-  >Rig Metadata
     </a>
               
             </li></ul>
@@ -426,8 +416,8 @@ While APEX is most often associated with rigging, it stands for <em>All Purpose 
   </a></div></div>
     </div></footer>
     
-    <script defer src="/animated-pixels/js/main.js" integrity=""></script>
-<script defer src="/animated-pixels/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script>
-        <script defer src="/animated-pixels/en.search.js" integrity=""></script>
+    <script defer src="/animated-pixels/js/main.min.6e0aca832a945cd0aa33749e8dd543da85a89f32dcc6eea95da8afb75f720fa6.js" integrity="sha256-bgrKgyqUXNCqM3SejdVD2oWonzLcxu6pXaivt19yD6Y="></script>
+<script defer src="/animated-pixels/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script>
+        <script defer src="/animated-pixels/en.search.min.b986e632185acfab83e8f6fe867fd4a60eb059b98e246996888cc21691fd7178.js" integrity="sha256-uYbmMhhaz6uD6Pb&#43;hn/Upg6wWbmOJGmWiIzCFpH9cXg="></script>
   </body>
 </html>
