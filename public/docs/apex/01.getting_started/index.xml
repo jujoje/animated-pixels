@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Animated Pixels – Getting Started</title>
-    <link>http://localhost:58905/animated-pixels/docs/apex/getting_started/</link>
+    <link>https://jujoje.github.io/animated-pixels/docs/apex/01.getting_started/</link>
     <description>Recent content in Getting Started on Animated Pixels</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <lastBuildDate>Sat, 18 Oct 2025 17:08:26 +1100</lastBuildDate>
     
-	  <atom:link href="http://localhost:58905/animated-pixels/docs/apex/getting_started/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://jujoje.github.io/animated-pixels/docs/apex/01.getting_started/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>00 Rigs in Houdini</title>
-      <link>http://localhost:58905/animated-pixels/docs/apex/getting_started/00.rigs_in_houdini/</link>
+      <link>https://jujoje.github.io/animated-pixels/docs/apex/01.getting_started/00.rigs_in_houdini/</link>
       <pubDate>Sat, 18 Oct 2025 17:16:10 +1100</pubDate>
       
-      <guid>http://localhost:58905/animated-pixels/docs/apex/getting_started/00.rigs_in_houdini/</guid>
+      <guid>https://jujoje.github.io/animated-pixels/docs/apex/01.getting_started/00.rigs_in_houdini/</guid>
       <description>
         
         
@@ -31,7 +31,7 @@
 &lt;/ul&gt;
 &lt;p&gt;SideFX often use the two terms interchangeably and while there are some distinctions between the two, it makes sense. KineFX and SOPs prepare the skeleton and geometry, with APEX building the rig logic and animation controls.&lt;/p&gt;
 &lt;h2&gt;KineFX Rigs&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;kinefx-rigs&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#kinefx-rigs&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:58905/animated-pixels/apex/img/getting_started.kinefx.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;
+    &lt;a href=&#34;#kinefx-rigs&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://jujoje.github.io/animated-pixels/apex/img/getting_started.kinefx.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;
 KineFX rigs consist of points and polygon lines. The point contain the joint transform matrices and attributes (transform, local transform, scale, joint name), while the line defines the hierarchy of the skeleton.&lt;/p&gt;
 &lt;p&gt;One of the advantages of skeletons simply being points with a transform matrix is that Houdini’s usual geometry tools can be use to manipulate them, for example creating a skeleton based off a curve, or procedurally adding joints using a resample, or constraining joints to a surface using a &lt;code&gt;primuv&lt;/code&gt; lookup.&lt;/p&gt;
 &lt;p&gt;KineFX can be used for a wide range of tasks (and people are always using it in new and interesting ways!). It’s core uses would be for:&lt;/p&gt;
@@ -43,7 +43,7 @@ KineFX rigs consist of points and polygon lines. The point contain the joint tra
 &lt;/ul&gt;
 &lt;p&gt;Given how flexible KineFX is, why would you use APEX? The main reasons that spring to mind are &lt;em&gt;speed&lt;/em&gt;, &lt;em&gt;interactivity&lt;/em&gt;.&lt;/p&gt;
 &lt;h2&gt;APEX Rigs&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;apex-rigs&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#apex-rigs&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:58905/animated-pixels/apex/img/getting_started.apex.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;
+    &lt;a href=&#34;#apex-rigs&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://jujoje.github.io/animated-pixels/apex/img/getting_started.apex.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;
 While APEX is most often associated with rigging, it stands for &lt;em&gt;All Purpose EXecution&lt;/em&gt; framework, and is also used for Houdini&amp;rsquo;s texturing and compositing framework Copernicus etc. It is an execution framework that runs outside of Houdini, with the emphasis on speed.&lt;/p&gt;
 &lt;p&gt;For rigging purposes, it provides a fast environment for executing the rig and deforming geometry, tied closely to the animation state.  The main advantages of APEX are that it offers:&lt;/p&gt;
 &lt;ul&gt;
@@ -59,11 +59,11 @@ While APEX is most often associated with rigging, it stands for &lt;em&gt;All Pu
     </item>
     
     <item>
-      <title>01 Workflow Overview</title>
-      <link>http://localhost:58905/animated-pixels/docs/apex/getting_started/01.workflow_overview/</link>
+      <title>01 Workflow Overview I</title>
+      <link>https://jujoje.github.io/animated-pixels/docs/apex/01.getting_started/01.workflow_overview/</link>
       <pubDate>Sat, 18 Oct 2025 19:05:21 +1100</pubDate>
       
-      <guid>http://localhost:58905/animated-pixels/docs/apex/getting_started/01.workflow_overview/</guid>
+      <guid>https://jujoje.github.io/animated-pixels/docs/apex/01.getting_started/01.workflow_overview/</guid>
       <description>
         
         
@@ -114,16 +114,16 @@ There are also the usual array of controls for painting or manipulating weights,
     </item>
     
     <item>
-      <title>02 A Simple Rig</title>
-      <link>http://localhost:58905/animated-pixels/docs/apex/getting_started/02.simple_rig/</link>
+      <title>02 Building A Simple Rig</title>
+      <link>https://jujoje.github.io/animated-pixels/docs/apex/01.getting_started/02.building_a_simple_rig/</link>
       <pubDate>Sat, 18 Oct 2025 19:05:21 +1100</pubDate>
       
-      <guid>http://localhost:58905/animated-pixels/docs/apex/getting_started/02.simple_rig/</guid>
+      <guid>https://jujoje.github.io/animated-pixels/docs/apex/01.getting_started/02.building_a_simple_rig/</guid>
       <description>
         
         
         &lt;p&gt;The easiest way  to see how this works is with a quick example. Rather than building everything from scratch, this will walk through this hip file:
-&lt;a href=&#34;http://localhost:58905/animated-pixels/apex/img/getting_startes.simple_rig.hiplc&#34;&gt;getting_startes.simple_rig.hiplc&lt;/a&gt;&lt;span class=&#34;hx:inline-block hx:align-text-bottom hextra-icon&#34;&gt;&lt;svg height=1em xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;
+&lt;a href=&#34;https://jujoje.github.io/animated-pixels/apex/img/getting_startes.simple_rig.hiplc&#34;&gt;getting_startes.simple_rig.hiplc&lt;/a&gt;&lt;span class=&#34;hx:inline-block hx:align-text-bottom hextra-icon&#34;&gt;&lt;svg height=1em xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;
 &lt;/p&gt;
 &lt;h2&gt;Preparing Geometry For APEX&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;preparing-geometry-for-apex&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#preparing-geometry-for-apex&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The first step it to prepare the geometry for using it in APEX. This consists of three main steps:&lt;/p&gt;
@@ -132,7 +132,7 @@ There are also the usual array of controls for painting or manipulating weights,
 &lt;li&gt;Capturing the skin&lt;/li&gt;
 &lt;li&gt;Pack geometry into folders for apex.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:58905/animated-pixels/apex/img/getting_started.overview.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jujoje.github.io/animated-pixels/apex/img/getting_started.overview.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Skin:&lt;/strong&gt; For this example we are going to be skinning the arm of the capybara. The first thing we want to do is delete everything apart from the arm.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Skeleton&lt;/strong&gt;: For the base skel, we use the skeleton node to create the  skeleton. We can use the rig pane to quickly rename the joints as we create them. The &lt;em&gt;Orient Joint&lt;/em&gt; node is used to orient the joints down the z axis.&lt;/li&gt;
@@ -146,7 +146,7 @@ There are also the usual array of controls for painting or manipulating weights,
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2&gt;APEX Nodes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;apex-nodes&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#apex-nodes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:58905/animated-pixels/apex/img/getting_started.apex_nodes.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+    &lt;a href=&#34;#apex-nodes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://jujoje.github.io/animated-pixels/apex/img/getting_started.apex_nodes.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Next up we have the APEX nodes. In this part of the network we are going to use the &lt;em&gt;APEX Autorig Component&lt;/em&gt; node to build the rig from out skeleton. In our initial setup we are going to create use two autorig components:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;FK Transform:&lt;/strong&gt; Adds controls for all the joints on the skeleton.&lt;/li&gt;
@@ -162,7 +162,7 @@ There are also the usual array of controls for painting or manipulating weights,
 &lt;h3&gt;Create The Rig Joints&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;create-the-rig-joints&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#create-the-rig-joints&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;If you display the &lt;em&gt;Create Joint Rig&lt;/em&gt; node and press enter in the viewport, you will see a control for each of the joints.&lt;/p&gt;
 &lt;p&gt;And if you open an APEX Network View pane, it should look like this:
-&lt;img src=&#34;http://localhost:58905/animated-pixels/apex/img/getting_started.fk_graph.jpg&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://jujoje.github.io/animated-pixels/apex/img/getting_started.fk_graph.jpg&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The Autorig Component  displays the nodes created by the current autorig component in green.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The &lt;em&gt;FK Transform&lt;/em&gt; component is creating a &lt;em&gt;Transform Object&lt;/em&gt; for each of the joints in the skeleton. These are the controllers that the animator interacts with.&lt;/li&gt;
@@ -171,10 +171,10 @@ There are also the usual array of controls for painting or manipulating weights,
 &lt;/ul&gt;
 &lt;h3&gt;Deform The Geometry&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;deform-the-geometry&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#deform-the-geometry&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The second &lt;em&gt;Autorig Component&lt;/em&gt; add the nodes necessary to deform the skin geometry.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:58905/animated-pixels/apex/img/getting_started.deform_graph.jpg&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jujoje.github.io/animated-pixels/apex/img/getting_started.deform_graph.jpg&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;This is the same at the SOP &lt;em&gt;Joint Deform&lt;/em&gt; node. It takes the rest skeleton, the animated skeleton and uses the transforms to deform the skin geometry.&lt;/p&gt;
-&lt;h3&gt;APEX Scene Animate&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;apex-scene-animate&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#apex-scene-animate&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The final node in our SOP chain is the APEX animate state. This is the node that the animator will use, and is focused on providing a fast interactive environment for animation alongside a suite of useful animation tools (from transient constraints to FBIK and physics).&lt;/p&gt;
+&lt;h2&gt;APEX Scene Animate&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;apex-scene-animate&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#apex-scene-animate&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The final node in our SOP chain is the APEX animate state. This is the node that the animator will use, and is focused on providing a fast interactive environment for animation alongside a suite of useful animation tools (from transient constraints to FBIK and physics).&lt;/p&gt;
 &lt;p&gt;Our Capybara’s arm already had a bit of animation on it; if you scrub the timeline the arm and fingers should bend. Not the greatest animation perhaps, but there to prove a point; if you go back to the geometry network and switch the &lt;em&gt;switch_delete_fingers&lt;/em&gt; to 1, you should see the fingers disappear, however the animation remains unchanged, similarly, setting it back to zero and the fingers should reappear with their animation.&lt;/p&gt;
 &lt;p&gt;This simple setup is fully procedural; as long as the controller names don&amp;rsquo;t change you can add additional features to the rig, but preserve the animation without having to throw away keyframes. Additionally you can swap in different packed folders, for example adding a different character, and still preserve the existing animation.&lt;/p&gt;
 

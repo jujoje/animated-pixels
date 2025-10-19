@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Animated Pixels – Tag B</title>
+    <link>http://localhost:58905/animated-pixels/tags/tag-b/</link>
+    <description>Recent content in Tag B on Animated Pixels</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    
+	  <atom:link href="http://localhost:58905/animated-pixels/tags/tag-b/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>
