@@ -1,0 +1,11 @@
+baseURL: https://jujoje.github.io/animated-pixels/
+languageCode: en-uk
+title: Animated Pixels
+theme: hextra
+
+
+menu:
+  main:
+    - name: Documentation
+      pageRef: /docs
+      weight: 1

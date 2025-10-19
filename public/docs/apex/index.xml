@@ -1,0 +1,46 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Animated Pixels – APEX</title>
+    <link>http://localhost:1313/animated-pixels/docs/apex/</link>
+    <description>Recent content in APEX on Animated Pixels</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <lastBuildDate>Sat, 18 Oct 2025 17:08:26 +1100</lastBuildDate>
+    
+	  <atom:link href="http://localhost:1313/animated-pixels/docs/apex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Getting Started</title>
+      <link>http://localhost:1313/animated-pixels/docs/apex/getting_started/</link>
+      <pubDate>Sat, 18 Oct 2025 17:08:26 +1100</pubDate>
+      
+      <guid>http://localhost:1313/animated-pixels/docs/apex/getting_started/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This section gives a general introduction to APEX in Houdini. It assumes a basic understanding Houdini but no specific knowledge of rigging in Houdini.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;An overview of rigging in Houdini&lt;/li&gt;
+&lt;li&gt;Preparing geometry for APEX&lt;/li&gt;
+&lt;li&gt;Using the &lt;em&gt;Autorig Component&lt;/em&gt; to build a basic rig&lt;/li&gt;
+&lt;li&gt;Skeleton Metadata: Tags and controls&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&#34;/&gt;&lt;/svg&gt;Info&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;This set of tutorials were created for Houdini 21. APEX changed significantly betewen 20.5 and 21. It is strongly recommended to use Houdini 21 to ensure that everything works as expected.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

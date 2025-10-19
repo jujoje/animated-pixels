@@ -1,0 +1,65 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Animated Pixels – Getting Started</title>
+    <link>http://localhost:1313/animated-pixels/docs/apex/getting_started/</link>
+    <description>Recent content in Getting Started on Animated Pixels</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <lastBuildDate>Sat, 18 Oct 2025 17:08:26 +1100</lastBuildDate>
+    
+	  <atom:link href="http://localhost:1313/animated-pixels/docs/apex/getting_started/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Rigging in Houdini</title>
+      <link>http://localhost:1313/animated-pixels/docs/apex/getting_started/rigging_in_houdini/</link>
+      <pubDate>Sat, 18 Oct 2025 17:16:10 +1100</pubDate>
+      
+      <guid>http://localhost:1313/animated-pixels/docs/apex/getting_started/rigging_in_houdini/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Rigging in Houdini consists of two overlapping systems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;KineFX&lt;/strong&gt;: KineFX uses geometry to define a skeleton and is used as the basis for the SOP based rigging tools, motion retargeting and crowd agent setup.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;APEX&lt;/strong&gt;: APEX runs on its own execution engine, and is focuses on providing a procedural system for building rigs, tied to an animator friendly viewport state that efficient evaluates the rig.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SideFX often use the two terms interchangeably and the two systems are fundamentally interrelated;&lt;/p&gt;
+&lt;h2&gt;Skeletons and KineFX&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;skeletons-and-kinefx&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#skeletons-and-kinefx&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;KineFX rigs consist of points and polygon lines. The point contain the joint transform matrices and attributes (transform, local transform, scale, joint name), while the line defines the hierarchy of the skeleton.&lt;/p&gt;
+&lt;p&gt;One of the nice things about skeletons just being points with a transform matrix is that all of Houdini usual geometry tools can be use to manipulate them, for example creating a skeleton based off a curve, or procedurally adding joints using a resample, or constraining joints to a surface using a &lt;code&gt;primuv&lt;/code&gt; lookup.&lt;/p&gt;
+&lt;h2&gt;APEX&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;apex&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#apex&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;While APEX is most often associated with rigging, it stands for &lt;em&gt;All Purpose eXecution Framework&lt;/em&gt;, and is also used for Houdini&amp;rsquo;s texturing and compositing framework Copernicus etc. It is an execution framework that runs outside of houdini, with the emphasis on speed.&lt;/p&gt;
+&lt;p&gt;For rigging purposes, it provides a fast environment for executing the rig and deforming geometry, tied closely the the animation state.  According to SideFX, the main advantages of APEX are that it offers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Flexibility by storing the entire graph as geometry.&lt;/li&gt;
+&lt;li&gt;Delayed invocation - evaluate just what you need when you need it, as well as partial evaluation.&lt;/li&gt;
+&lt;li&gt;Self healing - you can change the graph at any time&lt;/li&gt;
+&lt;li&gt;Compiled on the fly - performance orientated&lt;/li&gt;
+&lt;li&gt;Designed for live, real-time procedurals in the viewport.&lt;/li&gt;
+&lt;li&gt;Designed with traditional and ephemeral rigging in mind.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Basic Rigging Workflow</title>
+      <link>http://localhost:1313/animated-pixels/docs/apex/getting_started/basic_rigging_workflow/</link>
+      <pubDate>Sat, 18 Oct 2025 19:05:21 +1100</pubDate>
+      
+      <guid>http://localhost:1313/animated-pixels/docs/apex/getting_started/basic_rigging_workflow/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
