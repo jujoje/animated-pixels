@@ -40,7 +40,7 @@
 &lt;/div&gt;
 &lt;h2&gt;Contents&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;contents&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#contents&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:59907/animated-pixels/docs/apex/01.getting_started/00.rigs_in_houdini/&#34;&gt;00 Rigs in Houdini&lt;/a&gt;: A brief introduction to KineFX and APEX&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:59907/animated-pixels/docs/apex/01.getting_started/00.rigging_in_houdini/&#34;&gt;00 Rigs in Houdini&lt;/a&gt;: A brief introduction to KineFX and APEX&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://localhost:59907/animated-pixels/docs/apex/01.getting_started/01.workflow_overview/&#34;&gt;01 Workflow Overview&lt;/a&gt;: Overview of setting up an APEX Rig&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;%28http://localhost:59907/animated-pixels/docs/apex/01.getting_started/02.building_a_simple_rig/%29&#34;&gt;02 Demo: A Simple Rig&lt;/a&gt;: Simple walkthrough of prepping geometry for a rig.&lt;/li&gt;
 &lt;/ul&gt;

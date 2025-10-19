@@ -1,6 +1,6 @@
 ---
 date: '2025-10-18T19:05:21+11:00'
-title: '02 Creating A Simple Rig'
+title: 'A Simple Rig'
 weight: 3
 ---
 
@@ -60,3 +60,6 @@ Our Capybara’s arm already had a bit of animation on it; if you scrub the time
 This simple setup is fully procedural; as long as the controller names don't change you can add additional features to the rig, but preserve the animation without having to throw away keyframes. Additionally you can swap in different packed folders, for example adding a different character, and still preserve the existing animation.
 
 {{< video src="simple_rig_animate" loop="true" autoplay="true">}}
+
+## Next Steps
+
