@@ -1,70 +1,55 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr"><head><script src="/animated-pixels/livereload.js?mindelay=10&amp;v=2&amp;port=59907&amp;path=animated-pixels/livereload" data-no-instant defer></script>
+<html lang="en" dir="ltr"><head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
   <link rel="icon shortcut" href="/animated-pixels/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/animated-pixels/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/animated-pixels/favicon-16x16.png" type="image/png" sizes="16x16" />
 <link rel="icon" href="/animated-pixels/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/animated-pixels/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/animated-pixels/site.webmanifest" rel="manifest" />
-<title>Rig Metadata – Animated Pixels</title>
-  <meta name="description" content="Joints Tags Tags allow you to specify
-These are used heavily for both the Autorig Builder and Autorig Component nodes to specify how the compnent attaches to a rig.
-In SOPs you can use the Attribute Adjust Tags node, which allows you to select joints and tag them in the viewport.
-However, as tags are, at the end of the day, simply" /><link rel="canonical" href="http://localhost:59907/animated-pixels/docs/apex/01.getting_started/03.rig_metadata/" itemprop="url" />
+<title>Guides and Metadata – Animated Pixels</title>
+  <meta name="description" content="Guides allow you to build additional joint on top of the deformation skeleton.
+Skeleton Metadata Overview Tags Tags are used to add metadata to a rig, allowing it to be setup procedurally. For example you could tag a characters arms, with the tags #arm and #left or #arm and #right. This would allow you to apply a rig component, for example an IK chain, to those joints without having to specify the joint names. This makes it easy to quickly and setup a rig on characters which may have different naming conventions or joint structures." /><link rel="canonical" href="https://jujoje.github.io/animated-pixels/docs/apex/01.getting_started/03.rig_metadata/" itemprop="url" />
 
-<meta property="og:title" content="Rig Metadata">
+<meta property="og:title" content="Guides and Metadata">
 <meta
   property="og:description"
   content="
     
-      Joints
-    Tags
-    Tags allow you to specify
-These are used heavily for both the Autorig Builder and Autorig Component nodes to specify how the compnent attaches to a rig.
-In SOPs you can use the Attribute Adjust Tags node, which allows you to select joints and tag them in the viewport.
-However, as tags are, at the end of the day, simply
+      
     
   ">
 <meta
   property="og:type"
   content="
-    article
+    website
   ">
-<meta property="og:url" content="http://localhost:59907/animated-pixels/docs/apex/01.getting_started/03.rig_metadata/"><meta property="article:section" content="docs">
-
-<meta
-  property="article:published_time"
-  content="2025-10-19T22:17:16+11:00">
+<meta property="og:url" content="https://jujoje.github.io/animated-pixels/docs/apex/01.getting_started/03.rig_metadata/">
 
 
-<meta
-  property="article:modified_time"
-  content="2025-10-19T22:17:16+11:00">
-
-
-
-  <meta itemprop="name" content="Rig Metadata">
-  <meta itemprop="description" content="Joints Tags Tags allow you to specify
-These are used heavily for both the Autorig Builder and Autorig Component nodes to specify how the compnent attaches to a rig.
-In SOPs you can use the Attribute Adjust Tags node, which allows you to select joints and tag them in the viewport.
-However, as tags are, at the end of the day, simply">
+  <meta itemprop="name" content="Guides and Metadata">
+  <meta itemprop="description" content="Guides allow you to build additional joint on top of the deformation skeleton.
+Skeleton Metadata Overview Tags Tags are used to add metadata to a rig, allowing it to be setup procedurally. For example you could tag a characters arms, with the tags #arm and #left or #arm and #right. This would allow you to apply a rig component, for example an IK chain, to those joints without having to specify the joint names. This makes it easy to quickly and setup a rig on characters which may have different naming conventions or joint structures.">
   <meta itemprop="datePublished" content="2025-10-19T22:17:16+11:00">
   <meta itemprop="dateModified" content="2025-10-19T22:17:16+11:00">
-  <meta itemprop="wordCount" content="62">
+  <meta itemprop="wordCount" content="1146">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Rig Metadata">
-  <meta name="twitter:description" content="Joints Tags Tags allow you to specify
-These are used heavily for both the Autorig Builder and Autorig Component nodes to specify how the compnent attaches to a rig.
-In SOPs you can use the Attribute Adjust Tags node, which allows you to select joints and tag them in the viewport.
-However, as tags are, at the end of the day, simply">
-<link href="/animated-pixels/css/compiled/main.css" rel="stylesheet" />
-    <link href="/animated-pixels/css/variables.css" rel="stylesheet" />
-    <link href="/animated-pixels/css/custom.css" rel="stylesheet" />
+  <meta name="twitter:title" content="Guides and Metadata">
+  <meta name="twitter:description" content="Guides allow you to build additional joint on top of the deformation skeleton.
+Skeleton Metadata Overview Tags Tags are used to add metadata to a rig, allowing it to be setup procedurally. For example you could tag a characters arms, with the tags #arm and #left or #arm and #right. This would allow you to apply a rig component, for example an IK chain, to those joints without having to specify the joint names. This makes it easy to quickly and setup a rig on characters which may have different naming conventions or joint structures.">
+
+    <link rel="preload" href="/animated-pixels/css/compiled/main.min.4226b3776aa676b7fd6e0f46c0a3e7377a85aa4ccd7c2b65cf3e955156c407d3.css" as="style" integrity="sha256-Qiazd2qmdrf9bg9GwKPnN3qFqkzNfCtlzz6VUVbEB9M=" />
+    <link href="/animated-pixels/css/compiled/main.min.4226b3776aa676b7fd6e0f46c0a3e7377a85aa4ccd7c2b65cf3e955156c407d3.css" rel="stylesheet" integrity="sha256-Qiazd2qmdrf9bg9GwKPnN3qFqkzNfCtlzz6VUVbEB9M=" />
 
   
-<script src="/animated-pixels/js/main-head.js" integrity=""></script>
+
+
+
+
+
+
+<script src="/animated-pixels/js/main-head.min.94da6f95b126542222dab3a6e07ffefe1aaf63ec3ca555e827b58b80e7d3f0b7.js" integrity="sha256-lNpvlbEmVCIi2rOm4H/&#43;/hqvY&#43;w8pVXoJ7WLgOfT8Lc="></script>
 
   
   
@@ -201,14 +186,26 @@ However, as tags are, at the end of the day, simply">
       hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/animated-pixels/docs/apex/01.getting_started/03.rig_metadata/"
     
-  >Rig Metadata
+  >Guides and Metadata
     </a>
   
     <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
               <a
-                href="#"
+                href="#skeleton-metadata-overview"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              ></a>
+              >Skeleton Metadata Overview</a>
+            </li>
+          <li>
+              <a
+                href="#example-1-adding-tags"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Example 1: Adding Tags</a>
+            </li>
+          <li>
+              <a
+                href="#example-2-control-options-and-guides"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Example 2: Control Options and Guides</a>
             </li>
           </ul>
   
@@ -276,7 +273,7 @@ However, as tags are, at the end of the day, simply">
       hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/animated-pixels/docs/apex/01.getting_started/03.rig_metadata/"
     
-  >Rig Metadata
+  >Guides and Metadata
     </a>
               
             </li></ul>
@@ -340,11 +337,47 @@ However, as tags are, at the end of the day, simply">
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#joints">Joints
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#skeleton-metadata-overview">Skeleton Metadata Overview
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
         <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#tags">Tags
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#segments">Segments
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#propterties">Propterties
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#example-1-adding-tags">Example 1: Adding Tags
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#example-file">Example File
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#adding-tags">Adding Tags
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#using-the-fk-tag">Using the FK Tag
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#using-the-arm-segment-tag">Using the Arm Segment Tag
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#example-2-control-options-and-guides">Example 2: Control Options and Guides
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#joint-metadata-setup">Joint Metadata Setup
         </a>
       </li></ul>
       <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
@@ -370,25 +403,175 @@ However, as tags are, at the end of the day, simply">
         </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
           <a href="/animated-pixels/docs/apex/01.getting_started/">Getting Started</a>
-        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Rig Metadata</div>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Guides and Metadata</div>
   </div>
 
         <div class="content">
-          <h1>Rig Metadata</h1>
-          <h3>Joints<span class="hx:absolute hx:-mt-20" id="joints"></span>
-    <a href="#joints" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h3>Tags<span class="hx:absolute hx:-mt-20" id="tags"></span>
-    <a href="#tags" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Tags allow you to specify</p>
-<p>These are used heavily for both the <strong>Autorig Builder</strong> and <strong>Autorig Component</strong> nodes to specify how the compnent attaches to a rig.</p>
+          <h1>Guides and Metadata</h1>
+          <p>Guides allow you to build additional joint on top of the deformation skeleton.</p>
+<h2>Skeleton Metadata Overview<span class="hx:absolute hx:-mt-20" id="skeleton-metadata-overview"></span>
+    <a href="#skeleton-metadata-overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Tags<span class="hx:absolute hx:-mt-20" id="tags"></span>
+    <a href="#tags" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Tags are used to add metadata to a rig, allowing it to be setup  procedurally. For example you could tag a characters arms, with the tags #arm and #left or #arm and #right. This would allow you to apply a rig component, for example an IK chain, to those joints without having to specify the joint names. This makes it easy to quickly and setup a rig on characters which may have different naming conventions or joint structures.</p>
+<p>Tags are used heavily for both the <strong>Autorig Builder</strong> and <strong>Autorig Component</strong> nodes to specify how the component attaches to a rig.</p>
 <p>In SOPs you can use the <strong>Attribute Adjust Tags</strong> node, which allows you to select joints and tag them in the viewport.</p>
-<p>However, as tags are, at the end of the day, simply</p>
+<p>As tags are simply string arrays attribute, you can set them using VEX or VOPs. For example, to tag joints based on the side of a character:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>s[]<span style="color:#a6e22e">@tags</span> <span style="color:#f92672">=</span> {};
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@P.x</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.01</span> <span style="color:#960050;background-color:#1e0010">?</span> append(s[]<span style="color:#a6e22e">@tags</span>, <span style="color:#e6db74">&#34;left&#34;</span>) : <span style="color:#ae81ff">0</span> ;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@P.x</span> <span style="color:#f92672">&lt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.01</span> <span style="color:#960050;background-color:#1e0010">?</span> append(s[]<span style="color:#a6e22e">@tags</span>, <span style="color:#e6db74">&#34;right&#34;</span>) : <span style="color:#ae81ff">0</span> ;</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>And as it is an attribute the usual tools for manipulating them are available to you in SOPs.</p>
+<div class="hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200">
+  <p class="hx:flex hx:items-center hx:font-medium"><svg height=16px class="hx:inline-block hx:align-middle hx:mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>Tip</p>
+
+  <div class="hx:w-full hx:min-w-0 hx:leading-7">
+    <div class="hx:mt-6 hx:leading-7 hx:first:mt-0"><p>Tags are a concept that it worth getting familiar with; in this case we are defining tags on the guide geometry, however tags can also be use to tag nodes and ports in APEX graphs. This allows you to procedurally find nodes or ports when building graphs and is something we will heavily use later when building APEX graphs.</p></div>
+  </div>
+</div>
+<h3>Segments<span class="hx:absolute hx:-mt-20" id="segments"></span>
+    <a href="#segments" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Segments are tags, and are defined using the same <code>s[]@tags</code> string array. The only difference in that segments are used to define segments of a rig; for example and arm, or spine.</p>
+<p>In the example below we will use them to define the arm and leg segments and attach IK chains to them use the <strong>Autorig Component</strong> node.</p>
+<h3>Propterties<span class="hx:absolute hx:-mt-20" id="propterties"></span>
+    <a href="#propterties" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Another attribute that can be defined on the skeleton are properties. These can be used to define a range of properties on the controls generated from the shape, size and colour of the controller, to which handles get promoted for the animator to use. Properties are defined by a dictionary point attribute on the joint.</p>
+<p>For example, the vex below will set the colour, shape and promoted the t and s handles:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>dict d;
+</span></span><span style="display:flex;"><span>d[<span style="color:#e6db74">&#39;color&#39;</span>] <span style="color:#f92672">=</span> set(<span style="color:#ae81ff">1.0</span>, <span style="color:#ae81ff">1.0</span>, <span style="color:#ae81ff">0.0</span>);
+</span></span><span style="display:flex;"><span>d<span style="color:#a6e22e">@properties</span>[<span style="color:#e6db74">&#39;control&#39;</span>] <span style="color:#f92672">=</span> d;
+</span></span><span style="display:flex;"><span>d<span style="color:#a6e22e">@properties</span>[<span style="color:#e6db74">&#39;promote&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;t s&#39;</span>;
+</span></span><span style="display:flex;"><span>d<span style="color:#a6e22e">@properties</span>[<span style="color:#e6db74">&#39;shape&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;box&#39;</span>;</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Which would give use this dictionary:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;control&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;color&#34;</span>:[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;promote&#34;</span>:<span style="color:#e6db74">&#34;t s&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;shape&#34;</span>:<span style="color:#e6db74">&#34;box&#34;</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Another way to setup controls would be using the <strong>APEX Configure Controls</strong> SOP, or on the <em>Transform Objects</em> on the rig (which is where these attributes are ultimately used). It can be useful to define the controls on the guide geometry in SOPs. There is no correct way here, but rather whatever way best suites the desired workflow.</p>
+<h2>Example 1: Adding Tags<span class="hx:absolute hx:-mt-20" id="example-1-adding-tags"></span>
+    <a href="#example-1-adding-tags" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><img src="/animated-pixels/apex/img/getting_started.tags_overview.png" alt=""  loading="lazy" />
+As a quick example of how the Guides.skel, tags and joint metadata can be used, we’re going to quickly walk through how to apply tags then add a basic IK chain to the Capybara.</p>
+<h3>Example File<span class="hx:absolute hx:-mt-20" id="example-file"></span>
+    <a href="#example-file" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Download the example file here: <a href="/animated-pixels/apex/img/getting_startes.simple_rig.hiplc">getting_started.tags.hiplc</a><span class="hx:inline-block hx:align-text-bottom hextra-icon"><svg height=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></span>
+</p>
+<h3>Adding Tags<span class="hx:absolute hx:-mt-20" id="adding-tags"></span>
+    <a href="#adding-tags" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><video controls preload="auto" width="100%"  playsinline class="html-video">
+    <source src="/animated-pixels/docs/apex/01.getting_started/03.rig_metadata/adding_tags.mp4" type="video/mp4">
+  <span>Your browser doesn't support embedded videos, but don't worry, you can <a href="/animated-pixels/docs/apex/01.getting_started/03.rig_metadata/adding_tags.mp4">download it</a> and watch it with your favorite video player!</span>
+</video>
+To add tags in viewport, display the <em>set tags</em> node.Then in the viewport select the joints you want to add the tags to and press ‘a’. Type in the name of the tag you want to add and press enter. For this example we want to create two tags:</p>
+<ul>
+<li>First select the finger joints on both arms and tag them as ‘fk’.</li>
+<li>Secondly, select the arm, elbow and hand joints on the the left arm and tag them as ‘l_arm’ and tag the same joints on the right arm and tag them ‘r_arm’.</li>
+</ul>
+<h3>Using the FK Tag<span class="hx:absolute hx:-mt-20" id="using-the-fk-tag"></span>
+    <a href="#using-the-fk-tag" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><img src="/animated-pixels/apex/img/getting_started.tags_fk.png" alt=""  loading="lazy" />
+The first thing we are going to do is to use the fk tags to promote the rotation for the finger joints (but not the arm joints as they’ll use an ik component). To do this we use a <em>fk transform</em> component on the <strong>Autorig Builder</strong>.</p>
+<p>As we saw in the previous example, the <em>fk transform</em> creates joints for all of the joints on the skeleton. To get this working with our guide skeleton and tag, there are two parameters we need to change:</p>
+<ol>
+<li>Under <em>Source</em> set the <em>Skeleton</em> to <code>Guides.skel</code>. This ensures it will use our tagged joints rather than the base skeleton.</li>
+<li>In the <em>Controls</em> tab, set the <em>Promote R</em> parameter to <code>#fk</code>. This means that it will only promote the joints with the fk tag. Looking in the viewport you should now only see controls for the finger joints.</li>
+</ol>
+<h3>Using the Arm Segment Tag<span class="hx:absolute hx:-mt-20" id="using-the-arm-segment-tag"></span>
+    <a href="#using-the-arm-segment-tag" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><img src="/animated-pixels/apex/img/getting_started.tags_ik.png" alt=""  loading="lazy" />
+Next we want to use the arm segment we setup to add an ik chain to our arms. This is pretty straightforward.</p>
+<ol>
+<li>Go to the <em>fk</em> <strong>Autorig Component</strong> node. From the <em>Component Source</em> parameter at the top of the node select <em>Mulit IK</em>. In the viewport you should see some controllers floating around. The component doesn’t know where to attach them and its guess is a bit off in this case.</li>
+<li>On the <em>Driven</em> tab there is a parm for segments. You could type <code>r_arm l_arm</code>, but the parameter allows for pattern matching, so we can just type <code>*_arm</code> to get the ik chains created for both arms.</li>
+</ol>
+<h2>Example 2: Control Options and Guides<span class="hx:absolute hx:-mt-20" id="example-2-control-options-and-guides"></span>
+    <a href="#example-2-control-options-and-guides" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><img src="/animated-pixels/apex/img/getting_started.tags_properties.png" alt=""  loading="lazy" />
+This second example uses the same file as the previous one.</p>
+<p>As mentioned above, there&rsquo;s a variety of metadata that can be attached to each joint (point) on the skeleton. This can control the shape or the colour of the controller, as well as setting limits on the controller and defining the channels which get promoted.</p>
+<p>In the example file we are:</p>
+<ol>
+<li>Copying the elbow joint and offsetting it, to give us our pole vector controller.</li>
+<li>Creating a dictionary which defines the look of the controller and promotes just the translate channel.</li>
+<li>Finally we mirror the pole vector joint and parent it to the hand joint.</li>
+</ol>
+<h3>Joint Metadata Setup<span class="hx:absolute hx:-mt-20" id="joint-metadata-setup"></span>
+    <a href="#joint-metadata-setup" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The vex code for setting up the properties dictionary in the <em>set_properties</em> attribute wrange is:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">//</span> Set the Control Dictionary
+</span></span><span style="display:flex;"><span>dict control <span style="color:#f92672">=</span> set(
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;shapeoverride&#39;</span>, <span style="color:#e6db74">&#39;box_wires&#39;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;color&#39;</span>, set(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>                    );
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span><span style="color:#f92672">//</span> Set properties dictionary
+</span></span><span style="display:flex;"><span>d<span style="color:#a6e22e">@properties</span> <span style="color:#f92672">=</span> set(
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;control&#39;</span>, control,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;max_lock:t&#39;</span>, set(<span style="color:#ae81ff">0.5</span>,<span style="color:#ae81ff">0.5</span>,<span style="color:#ae81ff">0.5</span>),
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;min_lock:t&#39;</span>, set(<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span>), 
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;promote&#39;</span>, <span style="color:#e6db74">&#39;t&#39;</span>
+</span></span><span style="display:flex;"><span>                    );</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Which generates a dictionary which should look like this:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;control&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;color&#34;</span>:[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>],
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;shapeoverride&#34;</span>:<span style="color:#e6db74">&#34;box_wires&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;max_lock:t&#34;</span>:[<span style="color:#ae81ff">0.5</span>,<span style="color:#ae81ff">0.5</span>,<span style="color:#ae81ff">0.5</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;min_lock:t&#34;</span>:[<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;promote&#34;</span>, <span style="color:#e6db74">&#34;t&#34;</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>In the animate state of the <strong>Autorig Component</strong> there should be two large wireframe boxes, and if you try and move them they will be limited to the range set in the properties dictionary. Additionally, rotating the hand joints will rotate the pole vector controllers; the hierarchy we defined in the Guide skeleton has been brought across to our rig.</p>
 
         </div>
         <div class="hx:mt-16"></div>
-        <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
-        href="/animated-pixels/docs/apex/01.getting_started/02.building_a_simple_rig/"
-        title="A Simple Rig"
-        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
-      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>A Simple Rig</a></div>
+        
         
       </main>
     </article>
@@ -402,8 +585,8 @@ However, as tags are, at the end of the day, simply">
   </a></div></div>
     </div></footer>
     
-    <script defer src="/animated-pixels/js/main.js" integrity=""></script>
-<script defer src="/animated-pixels/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script>
-        <script defer src="/animated-pixels/en.search.js" integrity=""></script>
+    <script defer src="/animated-pixels/js/main.min.6e0aca832a945cd0aa33749e8dd543da85a89f32dcc6eea95da8afb75f720fa6.js" integrity="sha256-bgrKgyqUXNCqM3SejdVD2oWonzLcxu6pXaivt19yD6Y="></script>
+<script defer src="/animated-pixels/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script>
+        <script defer src="/animated-pixels/en.search.min.b986e632185acfab83e8f6fe867fd4a60eb059b98e246996888cc21691fd7178.js" integrity="sha256-uYbmMhhaz6uD6Pb&#43;hn/Upg6wWbmOJGmWiIzCFpH9cXg="></script>
   </body>
 </html>

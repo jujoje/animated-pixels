@@ -41,7 +41,7 @@ KineFX rigs consist of points and polygon lines. The point contain the joint tra
 &lt;li&gt;&lt;strong&gt;Rigs&lt;/strong&gt;: KineFX fits within the Houdini toolset that most artist are familiar with. It can be used for rigging plants, generating muscle, building procedural rigs editing motion.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Secondary Motion&lt;/strong&gt;: Adding secondary motion on top of existing animation, for example lag, overshoot or jiggle.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Given how flexible KineFX is, why would you use APEX? The main reasons that spring to mind are &lt;em&gt;speed&lt;/em&gt;, &lt;em&gt;interactivity&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Given how flexible KineFX is, why would you use APEX? The main reasons that spring to mind are &lt;em&gt;speed&lt;/em&gt; and &lt;em&gt;interactivity&lt;/em&gt;.&lt;/p&gt;
 &lt;h2&gt;APEX Rigs&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;apex-rigs&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#apex-rigs&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://jujoje.github.io/animated-pixels/apex/img/getting_started.apex.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;
 While APEX is most often associated with rigging, it stands for &lt;em&gt;All Purpose EXecution&lt;/em&gt; framework, and is also used for Houdini&amp;rsquo;s texturing and compositing framework Copernicus etc. It is an execution framework that runs outside of Houdini, with the emphasis on speed.&lt;/p&gt;
@@ -183,7 +183,188 @@ There are also the usual array of controls for painting or manipulating weights,
   &lt;span&gt;Your browser doesn&#39;t support embedded videos, but don&#39;t worry, you can &lt;a href=&#34;https://jujoje.github.io/animated-pixels/docs/apex/01.getting_started/02.building_a_simple_rig/simple_rig_animate.mp4&#34;&gt;download it&lt;/a&gt; and watch it with your favorite video player!&lt;/span&gt;
 &lt;/video&gt;
 &lt;h2&gt;Next Steps&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;next-steps&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#next-steps&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+    &lt;a href=&#34;#next-steps&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This covers the basic workflow of getting the rig into&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Guide Skeleton&lt;/strong&gt;: The guide skeleton allows us to add additional joints and metadata which can be used by the components and autorig builder.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Auotrig Components&lt;/strong&gt;:&lt;/li&gt;
+&lt;li&gt;
+&lt;hr&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Guides and Metadata</title>
+      <link>https://jujoje.github.io/animated-pixels/docs/apex/01.getting_started/03.rig_metadata/</link>
+      <pubDate>Sun, 19 Oct 2025 22:17:16 +1100</pubDate>
+      
+      <guid>https://jujoje.github.io/animated-pixels/docs/apex/01.getting_started/03.rig_metadata/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Guides allow you to build additional joint on top of the deformation skeleton.&lt;/p&gt;
+&lt;h2&gt;Skeleton Metadata Overview&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;skeleton-metadata-overview&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#skeleton-metadata-overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Tags&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;tags&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#tags&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Tags are used to add metadata to a rig, allowing it to be setup  procedurally. For example you could tag a characters arms, with the tags #arm and #left or #arm and #right. This would allow you to apply a rig component, for example an IK chain, to those joints without having to specify the joint names. This makes it easy to quickly and setup a rig on characters which may have different naming conventions or joint structures.&lt;/p&gt;
+&lt;p&gt;Tags are used heavily for both the &lt;strong&gt;Autorig Builder&lt;/strong&gt; and &lt;strong&gt;Autorig Component&lt;/strong&gt; nodes to specify how the component attaches to a rig.&lt;/p&gt;
+&lt;p&gt;In SOPs you can use the &lt;strong&gt;Attribute Adjust Tags&lt;/strong&gt; node, which allows you to select joints and tag them in the viewport.&lt;/p&gt;
+&lt;p&gt;As tags are simply string arrays attribute, you can set them using VEX or VOPs. For example, to tag joints based on the side of a character:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;s[]&lt;span style=&#34;color:#a6e22e&#34;&gt;@tags&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@P.x&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.01&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;?&lt;/span&gt; append(s[]&lt;span style=&#34;color:#a6e22e&#34;&gt;@tags&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;left&amp;#34;&lt;/span&gt;) : &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; ;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@P.x&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.01&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;?&lt;/span&gt; append(s[]&lt;span style=&#34;color:#a6e22e&#34;&gt;@tags&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;right&amp;#34;&lt;/span&gt;) : &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; ;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;And as it is an attribute the usual tools for manipulating them are available to you in SOPs.&lt;/p&gt;
+&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:flex-col hx:rounded-lg hx:border hx:py-4 hx:px-4 hx:border-gray-200 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200&#34;&gt;
+  &lt;p class=&#34;hx:flex hx:items-center hx:font-medium&#34;&gt;&lt;svg height=16px class=&#34;hx:inline-block hx:align-middle hx:mr-2&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&#34;/&gt;&lt;/svg&gt;Tip&lt;/p&gt;
+
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Tags are a concept that it worth getting familiar with; in this case we are defining tags on the guide geometry, however tags can also be use to tag nodes and ports in APEX graphs. This allows you to procedurally find nodes or ports when building graphs and is something we will heavily use later when building APEX graphs.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Segments&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;segments&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#segments&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Segments are tags, and are defined using the same &lt;code&gt;s[]@tags&lt;/code&gt; string array. The only difference in that segments are used to define segments of a rig; for example and arm, or spine.&lt;/p&gt;
+&lt;p&gt;In the example below we will use them to define the arm and leg segments and attach IK chains to them use the &lt;strong&gt;Autorig Component&lt;/strong&gt; node.&lt;/p&gt;
+&lt;h3&gt;Propterties&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;propterties&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#propterties&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Another attribute that can be defined on the skeleton are properties. These can be used to define a range of properties on the controls generated from the shape, size and colour of the controller, to which handles get promoted for the animator to use. Properties are defined by a dictionary point attribute on the joint.&lt;/p&gt;
+&lt;p&gt;For example, the vex below will set the colour, shape and promoted the t and s handles:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dict d;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;d[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;color&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; set(&lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;d&lt;span style=&#34;color:#a6e22e&#34;&gt;@properties&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;control&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; d;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;d&lt;span style=&#34;color:#a6e22e&#34;&gt;@properties&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;promote&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t s&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;d&lt;span style=&#34;color:#a6e22e&#34;&gt;@properties&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;shape&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;box&amp;#39;&lt;/span&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Which would give use this dictionary:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;control&amp;#34;&lt;/span&gt;:{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color&amp;#34;&lt;/span&gt;:[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;promote&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;t s&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;shape&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;box&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Another way to setup controls would be using the &lt;strong&gt;APEX Configure Controls&lt;/strong&gt; SOP, or on the &lt;em&gt;Transform Objects&lt;/em&gt; on the rig (which is where these attributes are ultimately used). It can be useful to define the controls on the guide geometry in SOPs. There is no correct way here, but rather whatever way best suites the desired workflow.&lt;/p&gt;
+&lt;h2&gt;Example 1: Adding Tags&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;example-1-adding-tags&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#example-1-adding-tags&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://jujoje.github.io/animated-pixels/apex/img/getting_started.tags_overview.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;
+As a quick example of how the Guides.skel, tags and joint metadata can be used, we’re going to quickly walk through how to apply tags then add a basic IK chain to the Capybara.&lt;/p&gt;
+&lt;h3&gt;Example File&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;example-file&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#example-file&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Download the example file here: &lt;a href=&#34;https://jujoje.github.io/animated-pixels/apex/img/getting_startes.simple_rig.hiplc&#34;&gt;getting_started.tags.hiplc&lt;/a&gt;&lt;span class=&#34;hx:inline-block hx:align-text-bottom hextra-icon&#34;&gt;&lt;svg height=1em xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;h3&gt;Adding Tags&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;adding-tags&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#adding-tags&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;video controls preload=&#34;auto&#34; width=&#34;100%&#34;  playsinline class=&#34;html-video&#34;&gt;
+    &lt;source src=&#34;https://jujoje.github.io/animated-pixels/docs/apex/01.getting_started/03.rig_metadata/adding_tags.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;span&gt;Your browser doesn&#39;t support embedded videos, but don&#39;t worry, you can &lt;a href=&#34;https://jujoje.github.io/animated-pixels/docs/apex/01.getting_started/03.rig_metadata/adding_tags.mp4&#34;&gt;download it&lt;/a&gt; and watch it with your favorite video player!&lt;/span&gt;
+&lt;/video&gt;
+To add tags in viewport, display the &lt;em&gt;set tags&lt;/em&gt; node.Then in the viewport select the joints you want to add the tags to and press ‘a’. Type in the name of the tag you want to add and press enter. For this example we want to create two tags:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First select the finger joints on both arms and tag them as ‘fk’.&lt;/li&gt;
+&lt;li&gt;Secondly, select the arm, elbow and hand joints on the the left arm and tag them as ‘l_arm’ and tag the same joints on the right arm and tag them ‘r_arm’.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Using the FK Tag&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;using-the-fk-tag&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#using-the-fk-tag&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://jujoje.github.io/animated-pixels/apex/img/getting_started.tags_fk.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;
+The first thing we are going to do is to use the fk tags to promote the rotation for the finger joints (but not the arm joints as they’ll use an ik component). To do this we use a &lt;em&gt;fk transform&lt;/em&gt; component on the &lt;strong&gt;Autorig Builder&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;As we saw in the previous example, the &lt;em&gt;fk transform&lt;/em&gt; creates joints for all of the joints on the skeleton. To get this working with our guide skeleton and tag, there are two parameters we need to change:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Under &lt;em&gt;Source&lt;/em&gt; set the &lt;em&gt;Skeleton&lt;/em&gt; to &lt;code&gt;Guides.skel&lt;/code&gt;. This ensures it will use our tagged joints rather than the base skeleton.&lt;/li&gt;
+&lt;li&gt;In the &lt;em&gt;Controls&lt;/em&gt; tab, set the &lt;em&gt;Promote R&lt;/em&gt; parameter to &lt;code&gt;#fk&lt;/code&gt;. This means that it will only promote the joints with the fk tag. Looking in the viewport you should now only see controls for the finger joints.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Using the Arm Segment Tag&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;using-the-arm-segment-tag&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#using-the-arm-segment-tag&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://jujoje.github.io/animated-pixels/apex/img/getting_started.tags_ik.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;
+Next we want to use the arm segment we setup to add an ik chain to our arms. This is pretty straightforward.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to the &lt;em&gt;fk&lt;/em&gt; &lt;strong&gt;Autorig Component&lt;/strong&gt; node. From the &lt;em&gt;Component Source&lt;/em&gt; parameter at the top of the node select &lt;em&gt;Mulit IK&lt;/em&gt;. In the viewport you should see some controllers floating around. The component doesn’t know where to attach them and its guess is a bit off in this case.&lt;/li&gt;
+&lt;li&gt;On the &lt;em&gt;Driven&lt;/em&gt; tab there is a parm for segments. You could type &lt;code&gt;r_arm l_arm&lt;/code&gt;, but the parameter allows for pattern matching, so we can just type &lt;code&gt;*_arm&lt;/code&gt; to get the ik chains created for both arms.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Example 2: Control Options and Guides&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;example-2-control-options-and-guides&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#example-2-control-options-and-guides&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://jujoje.github.io/animated-pixels/apex/img/getting_started.tags_properties.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;
+This second example uses the same file as the previous one.&lt;/p&gt;
+&lt;p&gt;As mentioned above, there&amp;rsquo;s a variety of metadata that can be attached to each joint (point) on the skeleton. This can control the shape or the colour of the controller, as well as setting limits on the controller and defining the channels which get promoted.&lt;/p&gt;
+&lt;p&gt;In the example file we are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Copying the elbow joint and offsetting it, to give us our pole vector controller.&lt;/li&gt;
+&lt;li&gt;Creating a dictionary which defines the look of the controller and promotes just the translate channel.&lt;/li&gt;
+&lt;li&gt;Finally we mirror the pole vector joint and parent it to the hand joint.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Joint Metadata Setup&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;joint-metadata-setup&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#joint-metadata-setup&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The vex code for setting up the properties dictionary in the &lt;em&gt;set_properties&lt;/em&gt; attribute wrange is:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;//&lt;/span&gt; Set the Control Dictionary
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dict control &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; set(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;shapeoverride&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;box_wires&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;color&amp;#39;&lt;/span&gt;, set(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    );
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;//&lt;/span&gt; Set properties dictionary
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;d&lt;span style=&#34;color:#a6e22e&#34;&gt;@properties&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; set(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;control&amp;#39;&lt;/span&gt;, control,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;max_lock:t&amp;#39;&lt;/span&gt;, set(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;min_lock:t&amp;#39;&lt;/span&gt;, set(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;,&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;,&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;), 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;promote&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    );&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Which generates a dictionary which should look like this:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;control&amp;#34;&lt;/span&gt;:{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color&amp;#34;&lt;/span&gt;:[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;shapeoverride&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;box_wires&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;max_lock:t&amp;#34;&lt;/span&gt;:[&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;min_lock:t&amp;#34;&lt;/span&gt;:[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;,&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;,&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;promote&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;t&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;In the animate state of the &lt;strong&gt;Autorig Component&lt;/strong&gt; there should be two large wireframe boxes, and if you try and move them they will be limited to the range set in the properties dictionary. Additionally, rotating the hand joints will rotate the pole vector controllers; the hierarchy we defined in the Guide skeleton has been brought across to our rig.&lt;/p&gt;
+
       </description>
     </item>
     

@@ -62,4 +62,9 @@ This simple setup is fully procedural; as long as the controller names don't cha
 {{< video src="simple_rig_animate" loop="true" autoplay="true">}}
 
 ## Next Steps
+This covers the basic workflow of getting the rig into 
+
+1. **Guide Skeleton**: The guide skeleton allows us to add additional joints and metadata which can be used by the components and autorig builder.  
+2. **Auotrig Components**:
+3. ****
 
